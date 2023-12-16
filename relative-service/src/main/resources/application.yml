@@ -1,0 +1,20 @@
+server:
+  port: 8084
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    requested-heartbeat: 580
+    cache:
+      channel:
+        size: 25
+    virtual-host: eldycare_broker
+
+relative:
+  rabbitmq:
+    relativeQueue: relativeQueue
+    relativeRoutingKey: 'relativeKey.#.*'
+    exchange: amq.topic
